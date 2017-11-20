@@ -1,0 +1,14 @@
+//========================================
+//  Layout Contact
+//========================================
+
+.contact {
+    @include flex($just: center);
+    align-items: center;
+    width: 90vw;
+    margin: 0 auto;
+}
+
+.social-icons {
+    @include flex($just: space-around);
+}

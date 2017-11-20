@@ -1,0 +1,13 @@
+//========================================
+//  Layout Projects
+//========================================
+
+.projects .content {
+    @include flex($dir: column);
+    margin: 0 auto;
+    width: 80vw;
+}
+
+.project-card {
+    @include flex($dir: column);
+}

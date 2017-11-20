@@ -1,0 +1,41 @@
+//========================================
+//  Components Header
+//========================================
+header {
+    min-height: 100vh;
+    position: relative;
+}
+
+.header-top {
+    background: url('../img/header-background.jpg') no-repeat;
+    background-position: 50% 50%;
+    background-size: cover;
+    height: 80vh;
+}
+
+.header-nav {
+    min-height: 3.375rem;
+    padding: $gutter;
+}
+
+.button-menu {
+    background: none;
+    border: none;
+    padding: 0;
+    margin-right: $gutter;
+}
+
+nav {
+    display: none;
+}
+
+.header-bottom {
+    height: 20vh;
+    color: $color-white;
+    background-color: $color-black;
+    padding: $gutter;
+}
+
+.header-bottom-title {
+    margin: 0;
+}

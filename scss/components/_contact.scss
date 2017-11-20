@@ -1,0 +1,28 @@
+//========================================
+//  Component Contact
+//========================================
+
+.contact {
+    min-height: 100vh;
+}
+
+.contact .content h2 {
+    margin-bottom: 1.4em;
+}
+
+.social-icons {
+    margin-top: 3em;
+    margin-bottom: 3em;
+}
+
+.social-icons button {
+    padding: 7vw;
+    width: 22vw; // MS Edge fix
+    height: 22vw; // IE fix
+    background: $color-white;
+    border: none;
+}
+
+.social-icon svg {
+    fill: rgba($color-black, .3);
+}

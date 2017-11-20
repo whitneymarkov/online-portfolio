@@ -1,0 +1,32 @@
+//========================================
+//  Component About
+//========================================
+
+.about-img {
+    background-image:
+        linear-gradient(rgba(255,255,255,0.3), rgba($color-accent-green, .4)),
+        url('../img/whitney-profile-picture.jpg');
+    background-attachment: scroll;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 25vh;
+}
+
+.about-text-container,
+.skills {
+    padding: $gutter;
+}
+
+.skills h4 {
+    margin: 10vh 0 2vh 0;
+}
+
+.skill-list {
+    span::after {
+        content: " | ";
+    }
+    span:last-child:after {
+        content: '';
+    }
+}

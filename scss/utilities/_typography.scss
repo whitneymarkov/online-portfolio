@@ -1,0 +1,52 @@
+//========================================
+//  Typography
+//========================================
+
+// General
+
+body {
+    @include typography();
+}
+
+.title {
+    @include typography($size: 2.5em, $height: 1, $color: $color-black);
+    font-weight: 700;
+}
+
+// Header
+
+.header-nav-span {
+    @include typography($size: .8em, $height: 1);
+    text-transform: uppercase;
+}
+
+.header-bottom-name {
+    @include typography($size: .8em, $color: $color-medium-grey);
+    font-weight: 600;
+    text-transform: uppercase;
+}
+
+.header-bottom-title {
+    @include typography($size: 1.7em, $height: 1, $color: $color-white);
+    font-weight: 700;
+    @media ($brk-mobile) {
+        font-size: 2.2em;
+    }
+}
+
+// About
+
+.about-text-container h2 {
+    @include typography($size: 2.2em, $height: 1, $color: $color-black);
+    font-weight: 700;
+}
+
+.skills {
+    h4 {
+        @include typography($size: 1em, $height: 1, $color: $color-black);
+        font-weight: 600;
+    }
+
+}
+
+// Contact
