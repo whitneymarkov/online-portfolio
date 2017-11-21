@@ -10,23 +10,8 @@
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-    height: 25vh;
-}
-
-.about-text-container,
-.skills {
-    padding: $gutter;
-}
-
-.skills h4 {
-    margin: 10vh 0 2vh 0;
-}
-
-.skill-list {
-    span::after {
-        content: " | ";
-    }
-    span:last-child:after {
-        content: '';
+    height: 12em;
+    @media ($brk-tablet) {
+        height: 20em;
     }
 }

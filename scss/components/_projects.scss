@@ -4,16 +4,20 @@
 
 .projects {
     background: $color-white;
+    padding-top: 10%;
 }
 
 .projects .content {
     h2 {
         margin-bottom: 1.5em;
+        @media ($brk-tablet) {
+            margin-bottom: 2em;
+        }
     }
 }
 
-.project-card:not(:last-child) {
-    margin-bottom: 15vh;
+.project-card {
+    margin-bottom: 8em;
 }
 
 .project-image {
@@ -21,13 +25,23 @@
         display: block;
         box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
     }
+    @media ($brk-tablet) {
+        width: 45%;
+    }
 }
 
 .project-card .description {
     h3 {
         margin-bottom: 0;
+        @media ($brk-tablet) {
+            margin-bottom: .5em;
+        }
     }
     p {
         margin: 0;
+    }
+
+    @media ($brk-tablet) {
+        width: 45%;
     }
 }

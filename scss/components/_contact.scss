@@ -3,7 +3,7 @@
 //========================================
 
 .contact {
-    min-height: 100vh;
+    height: 100%;
 }
 
 .contact .content h2 {
@@ -13,6 +13,10 @@
 .social-icons {
     margin-top: 3em;
     margin-bottom: 3em;
+    @media ($brk-tablet) {
+        margin-top: 4em;
+        margin-bottom: 4em;
+    }
 }
 
 .social-icons button {
@@ -21,6 +25,11 @@
     height: 22vw; // IE fix
     background: $color-white;
     border: none;
+    @media ($brk-tablet) {
+        padding: 5vw;
+        width: 15vw;
+        height: 15vw;
+    }
 }
 
 .social-icon svg {

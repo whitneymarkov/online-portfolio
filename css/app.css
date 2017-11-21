@@ -401,8 +401,18 @@ body {
   line-height: 1;
   font-family: "Montserrat", sans-serif;
   font-weight: 700; }
+  @media (min-width: 768px) {
+    .title {
+      font-size: 3.5em; } }
 
-.header-nav-span {
+.header-nav-text span {
+  color: #000;
+  font-size: 0.8em;
+  line-height: 1;
+  font-family: "Montserrat", sans-serif;
+  text-transform: uppercase; }
+
+.navigation-list li {
   color: #000;
   font-size: 0.8em;
   line-height: 1;
@@ -416,6 +426,9 @@ body {
   font-family: "Montserrat", sans-serif;
   font-weight: 600;
   text-transform: uppercase; }
+  @media (min-width: 768px) {
+    .header-bottom-name {
+      line-height: 2; } }
 
 .header-bottom-title {
   color: #fff;
@@ -425,7 +438,10 @@ body {
   font-weight: 700; }
   @media (min-width: 400px) {
     .header-bottom-title {
-      font-size: 2.2em; } }
+      font-size: 2em; } }
+  @media (min-width: 768px) {
+    .header-bottom-title {
+      font-size: 3em; } }
 
 .about-text-container h2 {
   color: #000;
@@ -433,13 +449,30 @@ body {
   line-height: 1;
   font-family: "Montserrat", sans-serif;
   font-weight: 700; }
+  @media (min-width: 400px) {
+    .about-text-container h2 {
+      font-size: 2.5em; } }
+  @media (min-width: 768px) {
+    .about-text-container h2 {
+      font-size: 3.5em; } }
 
-.skills h4 {
-  color: #000;
-  font-size: 1em;
-  line-height: 1;
-  font-family: "Montserrat", sans-serif;
-  font-weight: 600; }
+@media (min-width: 768px) {
+  .about-text-description {
+    font-size: 1.4em; } }
+
+@media (min-width: 768px) {
+  .project-card .description h3 {
+    color: #000;
+    font-size: 2.5em;
+    line-height: 1;
+    font-family: "Montserrat", sans-serif; } }
+@media (min-width: 768px) {
+  .project-card .description p {
+    font-size: 1.4em; } }
+
+@media (min-width: 768px) {
+  .contact p {
+    font-size: 1.3em; } }
 
 * {
   box-sizing: border-box; }
@@ -467,21 +500,19 @@ a {
 img {
   width: 100%; }
 
-section:not(:first-child) {
-  padding-top: 2.5em; }
-
-section:not(:last-child) {
-  padding-bottom: 4.5em; }
-
 .title {
   text-align: center; }
 
 .header-nav {
   display: flex;
   align-items: center; }
+  @media (min-width: 768px) {
+    .header-nav {
+      justify-content: space-between; } }
 
-nav {
-  display: flex; }
+.navigation-list {
+  display: flex;
+  justify-content: space-around; }
 
 .header-bottom {
   display: flex;
@@ -491,16 +522,43 @@ nav {
 #about-me {
   display: flex;
   flex-direction: column; }
+  @media (min-width: 768px) {
+    #about-me {
+      justify-content: space-around;
+      width: 80vw;
+      margin: 20% auto 10% auto; } }
+
+.about-text-container {
+  width: 90vw;
+  margin: 0 auto; }
+  @media (min-width: 768px) {
+    .about-text-container {
+      width: 100%;
+      margin: 0; } }
 
 .projects .content {
   display: flex;
   flex-direction: column;
   margin: 0 auto;
   width: 80vw; }
+  @media (min-width: 768px) {
+    .projects .content {
+      width: 95vw; } }
 
 .project-card {
   display: flex;
   flex-direction: column; }
+  @media (min-width: 768px) {
+    .project-card {
+      flex-direction: row-reverse;
+      justify-content: space-around;
+      align-items: center;
+      text-align: right; } }
+
+@media (min-width: 768px) {
+  .project-card:nth-child(2n) {
+    flex-direction: row;
+    text-align: left; } }
 
 .contact {
   display: flex;
@@ -508,39 +566,55 @@ nav {
   align-items: center;
   width: 90vw;
   margin: 0 auto; }
+  @media (min-width: 768px) {
+    .contact {
+      width: 80vw; } }
 
 .social-icons {
   display: flex;
   justify-content: space-around; }
 
 header {
-  min-height: 100vh;
+  height: 100%;
   position: relative; }
 
 .header-top {
   background: url("../img/header-background.jpg") no-repeat;
   background-position: 50% 50%;
   background-size: cover;
-  height: 80vh; }
+  height: 80%; }
 
 .header-nav {
   min-height: 3.375rem;
-  padding: 2vh; }
+  padding: 1em; }
+
+.header-nav-text span {
+  display: block; }
 
 .button-menu {
   background: none;
   border: none;
   padding: 0;
-  margin-right: 2vh; }
+  margin-right: 1em; }
+  @media (min-width: 768px) {
+    .button-menu {
+      display: none; } }
 
 nav {
   display: none; }
+  @media (min-width: 768px) {
+    nav {
+      display: block;
+      width: 60%; } }
+
+.navigation-list li a {
+  padding: 1em; }
 
 .header-bottom {
-  height: 20vh;
+  height: 20%;
   color: #fff;
   background-color: #000;
-  padding: 2vh; }
+  padding: 1em; }
 
 .header-bottom-title {
   margin: 0; }
@@ -551,44 +625,52 @@ nav {
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-  height: 25vh; }
-
-.about-text-container,
-.skills {
-  padding: 2vh; }
-
-.skills h4 {
-  margin: 10vh 0 2vh 0; }
-
-.skill-list span::after {
-  content: " | "; }
-.skill-list span:last-child:after {
-  content: ''; }
+  height: 12em; }
+  @media (min-width: 768px) {
+    .about-img {
+      height: 20em; } }
 
 .projects {
-  background: #fff; }
+  background: #fff;
+  padding-top: 10%; }
 
 .projects .content h2 {
   margin-bottom: 1.5em; }
+  @media (min-width: 768px) {
+    .projects .content h2 {
+      margin-bottom: 2em; } }
 
-.project-card:not(:last-child) {
-  margin-bottom: 15vh; }
+.project-card {
+  margin-bottom: 8em; }
 
 .project-image img {
   display: block;
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24); }
+@media (min-width: 768px) {
+  .project-image {
+    width: 45%; } }
 
 .project-card .description h3 {
   margin-bottom: 0; }
+  @media (min-width: 768px) {
+    .project-card .description h3 {
+      margin-bottom: .5em; } }
 .project-card .description p {
   margin: 0; }
+@media (min-width: 768px) {
+  .project-card .description {
+    width: 45%; } }
 
-#skew {
+#skew-1 {
+  height: 7em;
+  background: linear-gradient(to right bottom, #f6f6f6 50%, #fff 50%); }
+
+#skew-2 {
   height: 10em;
   background: linear-gradient(to left bottom, #fff 50%, #f6f6f6 50%); }
 
 .contact {
-  min-height: 100vh; }
+  height: 100%; }
 
 .contact .content h2 {
   margin-bottom: 1.4em; }
@@ -596,6 +678,10 @@ nav {
 .social-icons {
   margin-top: 3em;
   margin-bottom: 3em; }
+  @media (min-width: 768px) {
+    .social-icons {
+      margin-top: 4em;
+      margin-bottom: 4em; } }
 
 .social-icons button {
   padding: 7vw;
@@ -603,6 +689,11 @@ nav {
   height: 22vw;
   background: #fff;
   border: none; }
+  @media (min-width: 768px) {
+    .social-icons button {
+      padding: 5vw;
+      width: 15vw;
+      height: 15vw; } }
 
 .social-icon svg {
   fill: rgba(0, 0, 0, 0.3); }

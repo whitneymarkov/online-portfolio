@@ -5,10 +5,13 @@
 .header-nav {
     @include flex();
     align-items: center;
+    @media ($brk-tablet) {
+        justify-content: space-between;
+    }
 }
 
-nav {
-    @include flex();
+.navigation-list {
+    @include flex($just: space-around);
 }
 
 .header-bottom {

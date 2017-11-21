@@ -6,8 +6,24 @@
     @include flex($dir: column);
     margin: 0 auto;
     width: 80vw;
+    @media ($brk-tablet) {
+        width: 95vw;
+    }
 }
 
 .project-card {
     @include flex($dir: column);
+    @media ($brk-tablet) {
+        flex-direction: row-reverse;
+        justify-content: space-around;
+        align-items: center;
+        text-align: right;
+    }
+}
+
+.project-card:nth-child(2n) {
+    @media ($brk-tablet) {
+        flex-direction: row;
+        text-align: left;
+    }
 }

@@ -1,8 +1,12 @@
 //========================================
 //  Component Skew
 //========================================
+#skew-1 {
+    height: 7em;
+    background: linear-gradient(to right bottom, $color-light-grey 50%, $color-white 50%);
+}
 
-#skew {
+#skew-2 {
     height: 10em;
     background: linear-gradient(to left bottom, $color-white 50%, $color-light-grey 50%);
 }
