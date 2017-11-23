@@ -14,4 +14,8 @@
     @media ($brk-tablet) {
         height: 20em;
     }
+    @media ($brk-desktop) {
+        width: 20vw;
+        max-width: 250px;
+    }
 }

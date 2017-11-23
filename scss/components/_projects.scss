@@ -4,7 +4,7 @@
 
 .projects {
     background: $color-white;
-    padding-top: 10%;
+    padding: 10% 0 15% 0;
 }
 
 .projects .content {
@@ -13,10 +13,13 @@
         @media ($brk-tablet) {
             margin-bottom: 2em;
         }
+        @media ($brk-desktop) {
+            margin-bottom: 4em;
+        }
     }
 }
 
-.project-card {
+.project-card:not(:last-child) {
     margin-bottom: 8em;
 }
 
@@ -27,6 +30,10 @@
     }
     @media ($brk-tablet) {
         width: 45%;
+    }
+    @media ($brk-desktop) {
+        max-width: 340px;
+        width: 40%;
     }
 }
 
@@ -43,5 +50,8 @@
 
     @media ($brk-tablet) {
         width: 45%;
+    }
+    @media ($brk-desktop) {
+        width: 50%;
     }
 }

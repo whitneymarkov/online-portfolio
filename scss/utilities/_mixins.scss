@@ -34,3 +34,45 @@
     flex-wrap: $wrap;
     justify-content: $just;
 }
+
+// animation gradient
+
+@mixin gradientAnimation(
+$color1: #00ce6a,
+$color2: #08eeb3,
+$color3: #1acfd9,
+$dur: 13s
+) {
+    background: linear-gradient(270deg, $color1, $color2, $color3 );
+    background-size: 600% 600%;
+
+    -webkit-animation: GradientAnimation $dur ease infinite;
+    -moz-animation: GradientAnimation $dur ease infinite;
+    animation: GradientAnimation $dur ease infinite;
+
+    @-webkit-keyframes GradientAnimation {
+        0%{background-position:0% 50%}
+        50%{background-position:100% 50%}
+        100%{background-position:0% 50%}
+    }
+    @-moz-keyframes GradientAnimation {
+        0%{background-position:0% 50%}
+        50%{background-position:100% 50%}
+        100%{background-position:0% 50%}
+    }
+    @keyframes GradientAnimation {
+        0%{background-position:0% 50%}
+        50%{background-position:100% 50%}
+        100%{background-position:0% 50%}
+    }
+}
+
+// overlay animation
+@mixin transitionOverlay(
+$dur: 0.5s
+) {
+    transition: width $dur cubic-bezier(.92, .05, .34, .69), height $dur cubic-bezier(.92, .05, .34, .69);
+    -webkit-transition: width $dur cubic-bezier(.92, .05, .34, .69), height $dur cubic-bezier(.92, .05, .34, .69);
+    -moz-transition: width $dur cubic-bezier(.92, .05, .34, .69), height $dur cubic-bezier(.92, .05, .34, .69);
+    -ms-transition: width $dur cubic-bezier(.92, .05, .34, .69), height $dur cubic-bezier(.92, .05, .34, .69);
+}

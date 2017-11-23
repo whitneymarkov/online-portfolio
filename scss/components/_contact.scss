@@ -19,7 +19,8 @@
     }
 }
 
-.social-icons button {
+.social-icons a {
+    display: inline-block;
     padding: 7vw;
     width: 22vw; // MS Edge fix
     height: 22vw; // IE fix
@@ -29,6 +30,11 @@
         padding: 5vw;
         width: 15vw;
         height: 15vw;
+    }
+    @media ($brk-desktop) {
+        padding: 40px;
+        width: 124px;
+        height: 124px;
     }
 }
 

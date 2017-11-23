@@ -1,0 +1,157 @@
+//========================================
+//  Components Navigation
+//========================================
+
+// Nav button
+
+.nav-toggle {
+    display: block;
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 70px;
+    width: 70px;
+    z-index: 10;
+    @include gradientAnimation();
+    @media ($brk-tablet) {
+        top: 20px;
+        left: 20px;
+    }
+}
+
+// Nav icon
+
+.nav-toggle-icon {
+    position: absolute;
+    background: transparent;
+    top: 27.5px;
+    left: 25px;
+    height: 15px;
+    width: 20px;
+    margin: 0;
+    padding: 0;
+}
+
+.nav-toggle-icon span {
+    position: absolute;
+    display: block;
+    height: 2px;
+    width: 100%;
+    background: $color-white;
+    transition: transform .1s linear;
+}
+
+.nav-toggle-icon span:nth-child(1) {
+    top: 0;
+}
+
+.nav-toggle-icon span:nth-child(2) {
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.nav-toggle-icon span:nth-child(3) {
+    bottom: 0;
+    width: 70%;
+}
+
+// Icon Hover and Focus States
+.nav-toggle:focus {
+    outline: 0;
+}
+
+.nav-toggle:hover span:nth-child(1),
+.nav-toggle:focus span:nth-child(1) {
+    transform: translateY(-2px);
+}
+
+.nav-toggle:hover span:nth-child(3),
+.nav-toggle:focus span:nth-child(3) {
+    transform: translateY(2px);
+}
+
+// Overylay open states
+.nav-toggle--open:hover .nav-toggle-icon span,
+.nav-toggle--open .nav-toggle-icon span {
+    width: 130%;
+    left: -3px;
+    transition: all 0.2s ease-in-out;
+    -webkit-transition: all 0.2s ease-in-out;
+    -moz-transition: all 0.2s ease-in-out;
+    -ms-transition: all 0.2s ease-in-out;
+}
+
+.nav-toggle--open:hover .nav-toggle-icon span:nth-child(1),
+.nav-toggle--open .nav-toggle-icon span:nth-child(1) {
+    top: 6.875px;
+    transform: rotate(45deg) translateY(0);
+}
+
+.nav-toggle--open:hover .nav-toggle-icon span:nth-child(2),
+.nav-toggle--open .nav-toggle-icon span:nth-child(2) {
+    width: 0;
+}
+
+.nav-toggle--open:hover .nav-toggle-icon span:nth-child(3),
+.nav-toggle--open .nav-toggle-icon span:nth-child(3) {
+    bottom: 6.875px;
+    transform: rotate(-45deg) translateY(0);
+}
+
+// Navigation overlay
+
+nav {
+    display: block;
+    position: fixed;
+    overflow: hidden;
+    top: 0;
+    left: 0;
+    height: 70px;
+    width: 70px;
+    z-index: 9;
+    background-color: $color-black;
+    @include transitionOverlay;
+    @media ($brk-tablet) {
+        top: 20px;
+        left: 20px;
+    }
+}
+
+nav.open {
+    height: 100%;
+    width: 100%;
+    @media ($brk-tablet) {
+        height: calc(100% - 40px);
+        width: calc(100% - 40px);
+    }
+    @media ($brk-desktop){
+        width: 30%;
+    }
+}
+
+.main-nav li a {
+    position: relative;
+    display: inline-block;
+    padding: .3em;
+}
+
+.main-nav li a:focus {
+    outline: 0;
+}
+
+.main-nav li a:focus:after{
+    content: '';
+    position: absolute;
+    bottom: 4px;
+    left: 0;
+    width: 100%;
+    height: 3px;
+    @include gradientAnimation($dur: 6s);
+}
+
+// .main-nav li a:focus:after,
+.main-nav li a:hover {
+    @include gradientAnimation($dur: 6s);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}

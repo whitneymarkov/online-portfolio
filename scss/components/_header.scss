@@ -4,56 +4,38 @@
 header {
     height: 100%;
     position: relative;
-}
-
-.header-top {
     background: url('../img/header-background.jpg') no-repeat;
     background-position: 50% 50%;
     background-size: cover;
-    height: 80%;
 }
-
-.header-nav {
-    min-height: 3.375rem;
-    padding: $gutter;
-}
-
-.header-nav-text span {
-    display: block;
-    @media ($brk-tablet) {
-        // display: inline-block;
-    }
-}
-
-.button-menu {
-    background: none;
-    border: none;
-    padding: 0;
-    margin-right: $gutter;
-    @media ($brk-tablet) {
-        display: none;
-    }
-}
-
-nav {
-    display: none;
-    @media ($brk-tablet) {
-        display: block;
-        width: 60%;
-    }
-}
-
-.navigation-list li a {
-    padding: 1em;
-}
-
-.header-bottom {
-    height: 20%;
-    color: $color-white;
-    background-color: $color-black;
-    padding: $gutter;
-}
-
-.header-bottom-title {
+.header-title-name {
+    display: inline-block;
     margin: 0;
+    padding: .5em;
+    background-color: rgba($color-black, .7);
+}
+
+.header-title-position {
+    display: inline-block;
+    margin: .5em 0;
+    background-color: rgba($color-black, 0.8);
+    padding: .2em .5em;
+    border-radius: 2px;
+}
+
+.main-nav {
+    color: $color-white;
+    opacity: 0;
+    transition: opacity 0.2s ease-in;
+    -webkit-transition: opacity 0.2s ease-in;
+    -moz-transition: opacity 0.2s ease-in;
+    -ms-transition: opacity 0.2s ease-in;
+}
+
+.open .main-nav {
+    opacity: 1;
+    transition: opacity 0.2s ease-in 0.4s;
+    -webkit-transition: opacity 0.2s ease-in 0.4s;
+    -moz-transition: opacity 0.2s ease-in 0.4s;
+    -ms-transition: opacity 0.2s ease-in 0.4s;
 }

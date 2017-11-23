@@ -9,6 +9,10 @@
     @media ($brk-tablet) {
         width: 95vw;
     }
+    @media ($brk-desktop) {
+        width: 70vw;
+        max-width: 900px;
+    }
 }
 
 .project-card {

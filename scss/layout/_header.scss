@@ -2,18 +2,24 @@
 //  Layout Header
 //========================================
 
-.header-nav {
-    @include flex();
-    align-items: center;
-    @media ($brk-tablet) {
-        justify-content: space-between;
-    }
+
+.header-title {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    right: 0;
+    margin-left: auto;
+    margin-right: auto;
+    width: 90%;
+    text-align: center;
+    transform: translateY(-50%);
 }
 
-.navigation-list {
-    @include flex($just: space-around);
-}
-
-.header-bottom {
-    @include flex($dir: column, $just: center);
+.main-nav {
+    position: absolute;
+    margin: 0;
+    top: 50%;
+    width: 100%;
+    text-align: center;
+    transform: translateY(-50%);
 }

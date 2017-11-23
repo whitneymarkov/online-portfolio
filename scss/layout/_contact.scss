@@ -12,6 +12,15 @@
     }
 }
 
+.contact .content {
+    @media ($brk-desktop) {
+        max-width: 600px;
+    }
+}
+
 .social-icons {
     @include flex($just: space-around);
+    @media ($brk-desktop) {
+        justify-content: space-between;
+    }
 }
