@@ -403,7 +403,7 @@ body {
   font-weight: 700; }
   @media (min-width: 768px) {
     .title {
-      font-size: 3.5em; } }
+      font-size: 3em; } }
   @media (min-width: 1024px) {
     .title {
       font-size: 2.2em; } }
@@ -422,12 +422,13 @@ body {
   font-size: 4.4vw;
   line-height: 1;
   font-family: "Montserrat", sans-serif;
-  font-weight: 700;
+  font-weight: 400;
   letter-spacing: .1em;
   text-transform: uppercase; }
   @media (min-width: 768px) {
     .header-title-position {
-      font-size: 2.1rem; } }
+      font-size: 2.1rem;
+      font-weight: 700; } }
 
 .main-nav li {
   color: #fff;
@@ -449,22 +450,22 @@ body {
       font-size: 2.5em; } }
   @media (min-width: 768px) {
     .about-text-container h2 {
-      font-size: 3.5em; } }
+      font-size: 3.1em; } }
   @media (min-width: 1024px) {
     .about-text-container h2 {
       font-size: 2em; } }
 
 @media (min-width: 768px) {
   .about-text-description {
-    font-size: 1.4em; } }
+    font-size: 1.3em; } }
 @media (min-width: 1024px) {
   .about-text-description {
-    font-size: .9em; } }
+    font-size: .95em; } }
 
 @media (min-width: 768px) {
   .project-card .description h3 {
     color: #000;
-    font-size: 2.5em;
+    font-size: 2.2em;
     line-height: 1;
     font-family: "Montserrat", sans-serif; } }
 @media (min-width: 1024px) {
@@ -472,22 +473,28 @@ body {
     font-size: 1.4em; } }
 @media (min-width: 768px) {
   .project-card .description p {
-    font-size: 1.4em; } }
+    font-size: 1.3em; } }
 @media (min-width: 1024px) {
   .project-card .description p {
-    font-size: .9em; } }
+    font-size: .95em; } }
+
+.description a {
+  font-size: .65em;
+  text-transform: uppercase;
+  letter-spacing: .1em; }
 
 .buttonGitHub span {
   text-transform: uppercase;
   font-size: .6em;
-  letter-spacing: .1em; }
+  letter-spacing: .5em;
+  font-weight: 400; }
 
 @media (min-width: 768px) {
   .contact p {
     font-size: 1.3em; } }
 @media (min-width: 1024px) {
   .contact p {
-    font-size: .9em; } }
+    font-size: .95em; } }
 
 * {
   box-sizing: border-box; }
@@ -662,9 +669,9 @@ header {
   z-index: 10;
   background: linear-gradient(270deg, #00ce6a, #08eeb3, #1acfd9);
   background-size: 600% 600%;
-  -webkit-animation: GradientAnimation 13s ease infinite;
-  -moz-animation: GradientAnimation 13s ease infinite;
-  animation: GradientAnimation 13s ease infinite; }
+  -webkit-animation: GradientAnimation 10s ease infinite;
+  -moz-animation: GradientAnimation 10s ease infinite;
+  animation: GradientAnimation 10s ease infinite; }
 @-webkit-keyframes GradientAnimation {
   0% {
     background-position: 0% 50%; }
@@ -825,7 +832,8 @@ nav.open {
     background-position: 100% 50%; }
   100% {
     background-position: 0% 50%; } }
-.main-nav li a:hover {
+.main-nav li a:hover,
+.main-nav li a:active {
   background: linear-gradient(270deg, #00ce6a, #08eeb3, #1acfd9);
   background-size: 600% 600%;
   -webkit-animation: GradientAnimation 6s ease infinite;
@@ -910,6 +918,13 @@ nav.open {
   .project-card .description {
     width: 50%; } }
 
+.description a {
+  display: inline-block;
+  padding: .2em 1.5em;
+  margin-top: 1em;
+  border-radius: 1px;
+  border: 1px solid #000; }
+
 #skew-1 {
   height: 7em;
   background: linear-gradient(to right bottom, #f6f6f6 50%, #fff 50%); }
@@ -933,12 +948,17 @@ nav.open {
       margin-bottom: 4em; } }
 
 .social-icons a {
+  position: relative;
   display: inline-block;
   padding: 7vw;
   width: 22vw;
   height: 22vw;
   background: #fff;
-  border: none; }
+  border: none;
+  transition: all .1s ease-in-out;
+  -webkit-transition: all .1s ease-in-out;
+  -moz-transition: all .1s ease-in-out;
+  -ms-transition: all .1s ease-in-out; }
   @media (min-width: 768px) {
     .social-icons a {
       padding: 5vw;
@@ -950,7 +970,73 @@ nav.open {
       width: 124px;
       height: 124px; } }
 
+.social-icons a:before {
+  content: '';
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  background: linear-gradient(270deg, #00ce6a, #08eeb3, #1acfd9);
+  background-size: 600% 600%;
+  -webkit-animation: GradientAnimation 9s ease infinite;
+  -moz-animation: GradientAnimation 9s ease infinite;
+  animation: GradientAnimation 9s ease infinite;
+  opacity: 0;
+  transition: all .2s ease-in-out;
+  -webkit-transition: all .2s ease-in-out;
+  -moz-transition: all .2s ease-in-out;
+  -ms-transition: all .2s ease-in-out; }
+@-webkit-keyframes GradientAnimation {
+  0% {
+    background-position: 0% 50%; }
+  50% {
+    background-position: 100% 50%; }
+  100% {
+    background-position: 0% 50%; } }
+@-moz-keyframes GradientAnimation {
+  0% {
+    background-position: 0% 50%; }
+  50% {
+    background-position: 100% 50%; }
+  100% {
+    background-position: 0% 50%; } }
+@keyframes GradientAnimation {
+  0% {
+    background-position: 0% 50%; }
+  50% {
+    background-position: 100% 50%; }
+  100% {
+    background-position: 0% 50%; } }
+  @media (min-width: 1024px) {
+    .social-icons a:before {
+      top: 10px;
+      left: -10px;
+      bottom: -10px;
+      right: 10px; } }
+
+.social-icons a:hover {
+  background-color: transparent; }
+
+.social-icons a:hover:before {
+  opacity: 1; }
+  @media (min-width: 1024px) {
+    .social-icons a:hover:before {
+      transform: translate(10px, -10px); } }
+
+.social-icons a:active:before {
+  opacity: 1; }
+
 .social-icon svg {
-  fill: rgba(0, 0, 0, 0.3); }
+  fill: rgba(0, 0, 0, 0.3);
+  position: relative;
+  transition: all 0.2s ease-in-out;
+  -webkit-transition: all 0.2s ease-in-out;
+  -moz-transition: all 0.2s ease-in-out;
+  -ms-transition: all 0.2s ease-in-out; }
+
+.social-icon:hover svg {
+  fill: white; }
 
 /*# sourceMappingURL=app.css.map */

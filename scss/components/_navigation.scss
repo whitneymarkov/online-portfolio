@@ -12,7 +12,7 @@
     height: 70px;
     width: 70px;
     z-index: 10;
-    @include gradientAnimation();
+    @include gradientAnimation($dur: 10s);
     @media ($brk-tablet) {
         top: 20px;
         left: 20px;
@@ -129,6 +129,8 @@ nav.open {
     }
 }
 
+// Navigation focus and hover states
+
 .main-nav li a {
     position: relative;
     display: inline-block;
@@ -149,8 +151,8 @@ nav.open {
     @include gradientAnimation($dur: 6s);
 }
 
-// .main-nav li a:focus:after,
-.main-nav li a:hover {
+.main-nav li a:hover,
+.main-nav li a:active {
     @include gradientAnimation($dur: 6s);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;

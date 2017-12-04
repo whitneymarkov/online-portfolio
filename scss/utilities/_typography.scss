@@ -12,7 +12,7 @@ body {
     @include typography($size: 2.5em, $height: 1, $color: $color-black);
     font-weight: 700;
     @media ($brk-tablet) {
-        font-size: 3.5em;
+        font-size: 3em;
     }
     @media ($brk-desktop) {
         font-size: 2.2em;
@@ -30,11 +30,12 @@ body {
 
 .header-title-position {
     @include typography($size: 4.4vw, $height: 1, $color: $color-white);
-    font-weight: 700;
+    font-weight: 400;
     letter-spacing: .1em;
     text-transform: uppercase;
     @media ($brk-tablet) {
         font-size: 2.1rem;
+        font-weight: 700;
     }
 }
 
@@ -56,7 +57,7 @@ body {
         font-size: 2.5em;
     }
     @media ($brk-tablet) {
-        font-size: 3.5em;
+        font-size: 3.1em;
     }
     @media ($brk-desktop) {
         font-size: 2em;
@@ -65,10 +66,10 @@ body {
 
 .about-text-description {
     @media ($brk-tablet) {
-        font-size: 1.4em;
+        font-size: 1.3em;
     }
     @media ($brk-desktop) {
-        font-size: .9em;
+        font-size: .95em;
     }
 }
 
@@ -77,7 +78,7 @@ body {
 .project-card .description {
     h3 {
         @media ($brk-tablet) {
-            @include typography($size: 2.5em, $height: 1);
+            @include typography($size: 2.2em, $height: 1);
         }
         @media ($brk-desktop) {
             font-size: 1.4em;
@@ -85,18 +86,25 @@ body {
     }
     p {
         @media ($brk-tablet) {
-            font-size: 1.4em;
+            font-size: 1.3em;
         }
         @media ($brk-desktop) {
-            font-size: .9em;
+            font-size: .95em;
         }
     }
+}
+
+.description a {
+    font-size: .65em;
+    text-transform: uppercase;
+    letter-spacing: .1em;
 }
 
 .buttonGitHub span {
     text-transform: uppercase;
     font-size: .6em;
-    letter-spacing: .1em;
+    letter-spacing: .5em;
+    font-weight: 400;
 
 }
 
@@ -107,6 +115,6 @@ body {
         font-size: 1.3em;
     }
     @media ($brk-desktop) {
-        font-size: .9em;
+        font-size: .95em;
     }
 }

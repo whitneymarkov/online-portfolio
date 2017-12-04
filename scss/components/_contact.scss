@@ -20,12 +20,17 @@
 }
 
 .social-icons a {
+    position: relative;
     display: inline-block;
     padding: 7vw;
     width: 22vw; // MS Edge fix
     height: 22vw; // IE fix
     background: $color-white;
     border: none;
+    transition: all .1s ease-in-out;
+    -webkit-transition: all .1s ease-in-out;
+    -moz-transition: all .1s ease-in-out;
+    -ms-transition: all .1s ease-in-out;
     @media ($brk-tablet) {
         padding: 5vw;
         width: 15vw;
@@ -38,6 +43,51 @@
     }
 }
 
+.social-icons a:before {
+    content: '';
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    @include gradientAnimation($dur: 9s);
+    opacity: 0;
+    transition: all .2s ease-in-out;
+    -webkit-transition: all .2s ease-in-out;
+    -moz-transition: all .2s ease-in-out;
+    -ms-transition: all .2s ease-in-out;
+    @media ($brk-desktop) {
+        top: 10px;
+        left: -10px;
+        bottom: -10px;
+        right: 10px;
+    }
+}
+.social-icons a:hover {
+    background-color: transparent;
+}
+
+.social-icons a:hover:before {
+    opacity: 1;
+    @media ($brk-desktop) {
+        transform: translate(10px, -10px);
+    }
+}
+
+.social-icons a:active:before {
+    opacity: 1;
+}
+
 .social-icon svg {
     fill: rgba($color-black, .3);
+    position: relative;
+    transition: all 0.2s ease-in-out;
+    -webkit-transition: all 0.2s ease-in-out;
+    -moz-transition: all 0.2s ease-in-out;
+    -ms-transition: all 0.2s ease-in-out;
+}
+
+.social-icon:hover svg {
+    fill: rgba($color-white, 1);
 }
