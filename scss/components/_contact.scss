@@ -43,6 +43,10 @@
     }
 }
 
+.social-icon:focus {
+    outline: none;
+}
+
 .social-icons a:before {
     content: '';
     display: block;
@@ -68,7 +72,8 @@
     background-color: transparent;
 }
 
-.social-icons a:hover:before {
+.social-icons a:hover:before,
+ .social-icons a:focus:before{
     opacity: 1;
     @media ($brk-desktop) {
         transform: translate(10px, -10px);
@@ -88,6 +93,7 @@
     -ms-transition: all 0.2s ease-in-out;
 }
 
-.social-icon:hover svg {
+.social-icon:hover svg,
+.social-icon:focus svg {
     fill: rgba($color-white, 1);
 }

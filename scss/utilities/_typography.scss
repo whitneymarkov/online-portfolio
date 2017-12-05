@@ -100,11 +100,12 @@ body {
     letter-spacing: .1em;
 }
 
-.buttonGitHub span {
+.view-repo a {
     text-transform: uppercase;
-    font-size: .6em;
+    font-size: .9em;
     letter-spacing: .5em;
-    font-weight: 400;
+    font-weight: 600;
+    color: $color-white;
 
 }
 

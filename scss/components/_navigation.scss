@@ -120,6 +120,7 @@ nav {
 nav.open {
     height: 100%;
     width: 100%;
+    @include transitionOverlay;
     @media ($brk-tablet) {
         height: calc(100% - 40px);
         width: calc(100% - 40px);
@@ -137,18 +138,24 @@ nav.open {
     padding: .3em;
 }
 
-.main-nav li a:focus {
-    outline: 0;
-}
-
-.main-nav li a:focus:after{
+.main-nav li a:after {
     content: '';
     position: absolute;
+    opacity: 0;
     bottom: 4px;
     left: 0;
     width: 100%;
     height: 3px;
     @include gradientAnimation($dur: 6s);
+    transition: opacity .1s ease-in .2s;
+}
+
+.main-nav li a:focus {
+    outline: 0;
+}
+
+.main-nav li a:focus:after{
+    opacity: 1;
 }
 
 .main-nav li a:hover,
