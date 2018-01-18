@@ -485,10 +485,27 @@ body {
 
 .view-repo a {
   text-transform: uppercase;
-  font-size: .9em;
-  letter-spacing: .5em;
-  font-weight: 600;
+  font-size: .8em;
+  letter-spacing: .8em;
+  font-weight: 600; }
+  @media (min-width: 768px) {
+    .view-repo a {
+      font-size: .9em; } }
+
+.view-repo p {
+  font-size: .8em;
+  letter-spacing: .4em; }
+
+.skills-used {
+  text-transform: uppercase;
+  font-size: 1em;
+  font-weight: 600; }
+
+.demo {
   color: #fff; }
+
+.repo {
+  color: #000; }
 
 @media (min-width: 768px) {
   .contact p {
@@ -1905,27 +1922,61 @@ nav.open {
   cursor: pointer;
   opacity: 0;
   position: absolute;
-  top: 0;
+  top: -10px;
   left: -5px;
   bottom: -10px;
   right: -5px;
   background-color: rgba(255, 255, 255, 0.95);
-  transition: opacity .4s ease-in .1s; }
-  .view-repo a {
-    display: none;
+  transition: opacity .4s ease-in .1s;
+  text-align: left; }
+  .view-repo p {
     position: absolute;
-    margin: 0;
-    top: 50%;
+    top: 15%;
     left: 50%;
+    transform: translateX(-50%); }
+
+.view-repo:focus,
+.view-repo:active {
+  cursor: default;
+  outline: none;
+  opacity: 1; }
+  .view-repo:focus a,
+  .view-repo:active a {
+    display: block; }
+    @media (min-width: 1024px) {
+      .view-repo:focus a,
+      .view-repo:active a {
+        display: inline-block; } }
+
+.proj-view {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translateY(-50%) translateX(-40%); }
+  .proj-view a {
+    display: none;
     text-align: center;
-    transform: translateY(-50%) translateX(-50%);
-    background: linear-gradient(270deg, #00ce6a, #08eeb3, #1acfd9);
-    background-size: 600% 600%;
-    -webkit-animation: GradientAnimation 9s ease infinite;
-    -moz-animation: GradientAnimation 9s ease infinite;
-    animation: GradientAnimation 9s ease infinite;
     padding: .5em 1em;
-    transition: color .2s linear; }
+    outline-offset: -1px;
+    transition: .2s linear; }
+  .proj-view .demo {
+    background-color: #000; }
+  .proj-view .repo {
+    outline: 1px solid #000; }
+
+.demo:hover {
+  outline: 1px solid #000;
+  background-color: #fff;
+  color: #000; }
+
+.repo:hover {
+  outline: none;
+  color: #fff;
+  background: linear-gradient(270deg, #00ce6a, #08eeb3, #1acfd9);
+  background-size: 600% 600%;
+  -webkit-animation: GradientAnimation 10s ease infinite;
+  -moz-animation: GradientAnimation 10s ease infinite;
+  animation: GradientAnimation 10s ease infinite; }
 @-webkit-keyframes GradientAnimation {
   0% {
     background-position: 0% 50%; }
@@ -1947,18 +1998,6 @@ nav.open {
     background-position: 100% 50%; }
   100% {
     background-position: 0% 50%; } }
-.view-repo:focus,
-.view-repo:active {
-  cursor: default;
-  outline: none;
-  opacity: 1; }
-  .view-repo:focus a,
-  .view-repo:active a {
-    display: inline-block; }
-
-.view-repo a:hover {
-  color: #000; }
-
 #skew-1 {
   height: 7em;
   background: linear-gradient(to right bottom, #f6f6f6 50%, #fff 50%); }

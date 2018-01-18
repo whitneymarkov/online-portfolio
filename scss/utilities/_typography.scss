@@ -102,11 +102,27 @@ body {
 
 .view-repo a {
     text-transform: uppercase;
-    font-size: .9em;
-    letter-spacing: .5em;
+    font-size: .8em;
+    letter-spacing: .8em;
     font-weight: 600;
+    @media ($brk-tablet) {
+        font-size: .9em;
+    }
+}
+.view-repo p {
+    font-size: .8em;
+    letter-spacing: .4em;
+}
+.skills-used {
+    text-transform: uppercase;
+    font-size: 1em;
+    font-weight: 600;
+}
+.demo {
     color: $color-white;
-
+}
+.repo {
+    color: $color-black;
 }
 
 // Contact
